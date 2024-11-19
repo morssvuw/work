@@ -12,10 +12,10 @@ Demo code for review
 ### Some .py files requires GPU to run at a reasonable speed memory needed is about 13GB it is tested on:
 - Quadro RTX 6000 
 
-## **examples**
+## **Examples**
 In all examples below it is assumed that you downloaded this project on you machine and you know the path to its directory (the main where the .py files are) This is referred to by
 /path/to/dir/ below.
-### demo plotting example GFs from COMCOT
+### Demo plotting example GFs from COMCOT
 ```shell
 python /path/to/dir/example_comcot.py 
 ```
@@ -27,7 +27,7 @@ You can also set the location of initial source point by providing x and y coord
 ```shell
 python /path/to/dir/example_comcot.py -x 100 -y 80
 ```
-### demo example running toy dataset networks
+### Demo example running toy dataset networks
 ```shell
 python /path/to/dir/example_toyNetwork.py
 ```
@@ -38,7 +38,7 @@ some of the higher magnitude GF waves to plot. So every time you will get a diff
 wave but the scatter plot is the same. The results are also saved as pdf in the
 /results folder. 
 
-### demo example running toy dataset networks
+### Demo example running toy dataset networks
 ```shell
 python /path/to/dir/example_FNetwork.py
 ```
@@ -47,7 +47,7 @@ pos+diff networks. Results will also be saved in results folder.  It will random
 some of the higher magnitude GF waves to plot. So every time you will get a different
 wave but the scatter plot is the same.
 
-### demo example running inversion on real event
+### Demo example running inversion on real event
 ```shell
 python /path/to/dir/example_invert.py
 ```
@@ -55,7 +55,7 @@ Here we use F network (pretrained weight is provided) to carry out an inversion 
 event given provided data. Results will be plotted and saved. Requires GPU takes about 2-3 min. Can run on CPU but alot slower 20-30 min.
 
 
-### demo example training on artificial data
+### Demo example training on artificial data
 ```shell
 python /path/to/dir/example_train.py
 ```
