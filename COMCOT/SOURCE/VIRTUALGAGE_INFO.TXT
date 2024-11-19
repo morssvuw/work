@@ -1,0 +1,8 @@
+%FILE NAME OF GAUGE LOCATION DATA      :     ts_location.dat
+%-----------------------------------------------------------
+%GAUGE NO           X           Y       DEPTH   LAYER       I       J   FLAG*
+%*NOTE: FLAG=1 MEANS VALUES FROM NEAREST WATER GRID ARE USED!
+%-----------------------------------------------------------
+%TOTAL NUMBER OF GAUGE LOCATIONS       :                   0
+%    NUMBER OF GAUGES OUTSIDE DOMAIN   :                   0
+%    NUMBER OF GAUGES USING NEAREST VAL:                   0
