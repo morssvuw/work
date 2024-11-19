@@ -10,7 +10,7 @@ Demo code for review
 - Matplotlib version 3.9.0
 
 ### Some .py files requires GPU to run at a reasonable speed memory needed is about 13GB it is tested on:
--Quadro RTX 6000 
+- Quadro RTX 6000 
 
 ## **examples**
 ### demo plotting example GFs from COMCOT
