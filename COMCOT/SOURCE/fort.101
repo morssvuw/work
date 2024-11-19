@@ -1,0 +1,742 @@
+************************************************************
+*                          COMCOT                          *
+*                                                          *
+*         Cornell Multi-grid Coupled Tsunami model         *
+*                                                          *
+*         version 1.7DevB                                  *
+*         updated on 2021-10-10                            *
+*                                                          *
+*         Developed by                                     *
+*                                                          *
+*         Dr Xiaoming Wang                                 *
+*         Email:                                           *
+*               xwang007@hotmail.com                       *
+*               xiaoming.wang2012@gmail.com                *
+*               xw46@cornell.edu                           *
+*               x.wang@gns.cri.nz                          *
+*                                                          *
+************************************************************
+                                                            
+************************************************************
+*               CONFIGURATION INFORMATION                  *
+************************************************************
+# Job Description: One-line brief description may be added here                                                                                                                                         
+                                                            
+------------------- GENERAL INFORMATION --------------------
+    TOTAL SIMULATED DURATION (SECONDS) :       3600.00000000
+    TIME INTERVAL OF SNAPSHOT OUTPUT   :        300.00000000
+    TIME STEP SIZE (1ST LEVEL, SECOND) :          1.00000000
+    TOTAL TIME STEPS TO RUN    (STEPS) :                3601
+    STEP INTERVAL OF SNAPSHOT OUTPUT   :                 300
+    HOURLY MAX WATER ELEVATION OUTPUT  :            DISABLED
+    HOURLY MAXIMUM FLOW DEPTH OUTPUT   :            DISABLED
+    TIME HISTORY RECORD OUTPUT         :             ENABLED
+    TIME HISTORY OUTPUT INTERVAL (S)   :             1.00000
+    MAX VOLUME FLUX AND VELOCITY OUTPUT:            DISABLED
+    COLD START FUNCTION                :             ENABLED
+       HOTSTART SNAPSHOT SAVED AT TIME : 3600000000.00000000
+       HOTSTART SNAPSHOT SAVED AT STEP :                   0
+                                                            
+--------------- BOUNDARY CONDITION INFORMATION -------------
+    BOUNDARY CONDITION                 :           ABSORBING
+                                                            
+                                                            
+---------------  INITIAL CONDITION INFORMATION -------------
+    #  USE BUILT-IN FAULT MODEL        :                    
+       TOTAL NUMBER OF FAULT SEGMENTS  :                   1
+       PARAMETERS FOR FAULT SEGMENT    :                   1
+       USE ELASTIC FAULT PLANE MODEL BY         OKADA (1985)
+       REFERENCING POSITION            :  FAULT PLANE CENTER
+       BATHYMETRY SLOPE CORRECTION     :            DISABLED
+       FAULT RUPTURE START TIME(SECOND):              0.0000
+       FAULT UPLIFT DURATION  (SECONDS):              0.0000
+       EPICENTER (LON, LAT)   (DEGREES):    -151.6667,     -80.6667
+       FOCAL DEPTH         (KILOMETERS):             25.0000
+       FAULT LENGTH        (KILOMETERS):            110.0000
+       FAULT WIDTH         (KILOMETERS):             50.0000
+       STRIKE ANGLE    (THETA, DEGREES):             30.0000
+       DIP ANGLE       (DELTA, DEGREES):             30.0000
+       SLIP ANGLE     (LAMBDA, DEGREES):             30.0000
+       DISLOCATION             (METERS):             15.0000
+       DOMAIN ORIGIN(LON,LAT) (DEGREES):    -156.1000,     -83.1000
+                                                            
+                                                            
+                                                            
+------------------ GRID LAYER INFORMATION ------------------
+    GRID SETUP INFO OF RESOLUTION LEVEL:                   1
+    #  GRID IDENTIFICATION NUMBER      :                   1
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :             ENABLED
+       SPONGE ZONE WIDTH (NO. OF GRIDS):                  50
+       GHOST GRIDS FOR CHILD GRID LAYER:             ENABLED
+       GHOST GRIDS WIDTH (NO. OF GRIDS):                  50
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   0
+       GRID SIZE RATIO                 :                   1
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -156.09999084
+           X_END             (DEGREES) :       -146.89999084
+           Y_START           (DEGREES) :        -83.09999847
+           Y_END             (DEGREES) :        -73.74848476
+           I_START             (INDEX) :                  51
+           I_END               (INDEX) :                  97
+           J_START             (INDEX) :                  51
+           J_END               (INDEX) :                 298
+       GRID DIMENSION          (NX*NY) :       47 *      248
+       GRID SIZE IN X     (DX,MINUTES) :         12.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  1.44164 -  3.35825
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   6
+           CHILD GRID LAYER ID         :                   2
+           CHILD GRID LAYER ID         :                   5
+           CHILD GRID LAYER ID         :                   8
+           CHILD GRID LAYER ID         :                  11
+           CHILD GRID LAYER ID         :                  14
+           CHILD GRID LAYER ID         :                  17
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g0.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    GRID SETUP INFO OF RESOLUTION LEVEL:                   2
+    #  GRID IDENTIFICATION NUMBER      :                   2
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -152.37499084
+           X_END             (DEGREES) :       -150.42499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  70
+           I_END               (INDEX) :                  79
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                   3
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g1.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                   5
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -151.57499084
+           X_END             (DEGREES) :       -149.62499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  74
+           I_END               (INDEX) :                  83
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                   6
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g4.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                   8
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -151.37499084
+           X_END             (DEGREES) :       -149.42499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  75
+           I_END               (INDEX) :                  84
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                   9
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g7.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  11
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -151.17499084
+           X_END             (DEGREES) :       -149.22499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  76
+           I_END               (INDEX) :                  85
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  12
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g10.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  14
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.97499084
+           X_END             (DEGREES) :       -149.02499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  77
+           I_END               (INDEX) :                  86
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  15
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g13.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  17
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   1
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.77499084
+           X_END             (DEGREES) :       -148.82499084
+           Y_START           (DEGREES) :        -79.54040234
+           Y_END             (DEGREES) :        -77.26608455
+           I_START             (INDEX) :                  78
+           I_END               (INDEX) :                  87
+           J_START             (INDEX) :                 171
+           J_END               (INDEX) :                 227
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          3.00000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.54346 -  0.66043
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  18
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g16.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    GRID SETUP INFO OF RESOLUTION LEVEL:                   3
+    #  GRID IDENTIFICATION NUMBER      :                   3
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   2
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -151.54374084
+           X_END             (DEGREES) :       -151.05624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                   4
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g2.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                   6
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   5
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.74374084
+           X_END             (DEGREES) :       -150.25624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                   7
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g5.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                   9
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   8
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.54374084
+           X_END             (DEGREES) :       -150.05624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  10
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g8.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  12
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  11
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.34374084
+           X_END             (DEGREES) :       -149.85624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  13
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g11.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  15
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  14
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.14374084
+           X_END             (DEGREES) :       -149.65624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  16
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g14.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  18
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  17
+       GRID SIZE RATIO                 :                   4
+       TIME STEP SIZE RATIO            :                   1
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -149.94374084
+           X_END             (DEGREES) :       -149.45624084
+           Y_START           (DEGREES) :        -78.58646065
+           Y_END             (DEGREES) :        -78.01110579
+           I_START             (INDEX) :                  19
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                 103
+           J_END               (INDEX) :                 159
+       GRID DIMENSION          (NX*NY) :       40 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.75000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.14853 -  0.15581
+       TIME STEP SIZE    (DT, SECONDS) :          1.00000000
+       NUMBER OF CHILD GRID LAYERS     :                   1
+           CHILD GRID LAYER ID         :                  19
+           IMPROVED UPDATE SCHEME IS ENABLED!
+       FILE NAME OF INPUT DEM DATA     :g17.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    GRID SETUP INFO OF RESOLUTION LEVEL:                   4
+    #  GRID IDENTIFICATION NUMBER      :                   4
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   3
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -151.38540751
+           X_END             (DEGREES) :       -151.21457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g3.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                   7
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   6
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.58540751
+           X_END             (DEGREES) :       -150.41457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g6.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  10
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                   9
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.38540751
+           X_END             (DEGREES) :       -150.21457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g9.xyz                                                                          
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  13
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  12
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -150.18540751
+           X_END             (DEGREES) :       -150.01457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g12.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  16
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  15
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -149.98540751
+           X_END             (DEGREES) :       -149.81457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g15.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+    #  GRID IDENTIFICATION NUMBER      :                  19
+       USE SPHERICAL COORDINATE SYSTEM
+       USE NONLINEAR SHALLOW WATER EQUATIONS
+       FLOW MODELLING                  :            DISABLED
+       BOTTOM FRICTION                 :             ENABLED
+          USE CONSTANT ROUGHNESS COEF. :          0.01300000
+       WAVE BREAKING                   :             ENABLED
+       SPONGE SCHEME FOR 2-WAY NESTING :            DISABLED
+       GHOST GRIDS FOR CHILD GRID LAYER:            DISABLED
+       SURFACE DISPL. SNAPSHOT OUTPUT  :             ENABLED
+       VOLUME FLUX SNAPSHOT OUTPUT     :            DISABLED
+       MAXIMUM VELOCITY/FLUX OUTPUT    :            DISABLED
+       PARENT GRID ID                  :                  18
+       GRID SIZE RATIO                 :                   3
+       TIME STEP SIZE RATIO            :                   2
+       POSITION IN ITS PARENT LAYER    :
+           X_START           (DEGREES) :       -149.78540751
+           X_END             (DEGREES) :       -149.61457418
+           Y_START           (DEGREES) :        -78.39525529
+           Y_END             (DEGREES) :        -78.20344884
+           I_START             (INDEX) :                  15
+           I_END               (INDEX) :                  28
+           J_START             (INDEX) :                  79
+           J_END               (INDEX) :                 154
+       GRID DIMENSION          (NX*NY) :       42 *      228
+       GRID SIZE IN X     (DX,MINUTES) :          0.25000000
+       GRID SIZE IN Y     (DY,MINUTES) :  0.05036 -  0.05106
+       TIME STEP SIZE    (DT, SECONDS) :          0.50000000
+       NUMBER OF CHILD GRID LAYERS     :                   0
+       FILE NAME OF INPUT DEM DATA     :g18.xyz                                                                         
+       UPDATING DEM WITH FAULT DISPL.  :             ENABLED
+       AMBIENT SEA LEVEL CORRECTION (M):            DISABLED
+                                                            
+                                                            
+ ***********************************************************
+ -----------------------------------------------------------
+ >              TIME HISTORY RECORD INFORMATION            <
+    FILE NAME OF GAUGE LOCATION INPUT  :     ts_location.dat
+ -----------------------------------------------------------
+    TOTAL NUMBER OF GAUGE LOCATIONS    :                   0
+    NUMBER OF GAUGES OUTSIDE DOMAIN    :                   0
+    NUMBER OF GAUGES USING NEAREST VAL.:                   0
+    TIME HISTORY RECORD SAVED TO INDIVIDUAL GAUGE FILES.    
+    MORE INFORMATION CAN BE FOUND IN VIRTUALGAGE_INFO.TXT   
+------------------------------------------------------------
+                                                            
