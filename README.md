@@ -13,9 +13,11 @@ Demo code for review
 - Quadro RTX 6000 
 
 ## **examples**
+In all examples below it is assumed that you downloaded this project on you machine and you know the path to its directory (the main where the .py files are) This is referred to by
+/path/to/dir/ below.
 ### demo plotting example GFs from COMCOT
 ```shell
-python /path/to/paper/example_comcot.py 
+python /path/to/dir/example_comcot.py 
 ```
 This will plot results that we obtained if no COMCOT application is found. If instead you want to run 
 your own simulation (sing our configuration file) you need to provide a COMCOT exe placed in the directory /COMCOT/SOURCE/
@@ -23,11 +25,11 @@ and its filename must be COMCOT_app.
 
 You can also set the location of initial source point by providing x and y coordinates e.g., for source (100,80)
 ```shell
-python /path/to/paper/example_comcot.py -x 100 -y 80
+python /path/to/dir/example_comcot.py -x 100 -y 80
 ```
 ### demo example running toy dataset networks
 ```shell
-python /path/to/paper/example_toyNetwork.py
+python /path/to/dir/example_toyNetwork.py
 ```
 It will load pretrained models (pos only and
 pos+diff nets) and some saved GFs and evaluate the networks then compare
@@ -38,7 +40,7 @@ wave but the scatter plot is the same. The results are also saved as pdf in the
 
 ### demo example running toy dataset networks
 ```shell
-python /path/to/paper/example_FNetwork.py
+python /path/to/dir/example_FNetwork.py
 ```
 Runs an example for real data Japan networks again comparing pos and
 pos+diff networks. Results will also be saved in results folder.  It will randomly select
@@ -47,7 +49,7 @@ wave but the scatter plot is the same.
 
 ### demo example running inversion on real event
 ```shell
-python /path/to/paper/example_invert.py
+python /path/to/dir/example_invert.py
 ```
 Here we use F network (pretrained weight is provided) to carry out an inversion of an
 event given provided data. Results will be plotted and saved. Requires GPU takes about 2-3 min. Can run on CPU but alot slower 20-30 min.
@@ -55,7 +57,7 @@ event given provided data. Results will be plotted and saved. Requires GPU takes
 
 ### demo example training on artificial data
 ```shell
-python /path/to/paper/example_train.py
+python /path/to/dir/example_train.py
 ```
 Here we  demonstrate how to train F network as a GF model.  Training data can be provided under the /train directory, and its filename is train_data. It should be a torch.save file using pickle and default protocol. The contents are a dictionary with ordered keys src,tar,wv which are torch tensors of source grid index (flattened comuptational domain index not two dimensional), target grid point index  (flattened comuptational domain index not two dimensional), and corresponding Green's function (must be 250 points long or you can edit code to allow a different size).
 
