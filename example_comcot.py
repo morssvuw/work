@@ -71,7 +71,7 @@ if 'COMCOT_app' in os.listdir(dir_path+'/COMCOT/SOURCE'):
     gf=wave.view(-1,szy.unique().shape[0],szx.unique().shape[0])[:,  PTY-10,PTX-10 ]
 else:
     print('COMCOT_app not found will plot pre-saved simulation results')
-    tme, szx,szy,szz,mp,gf     =torch.load('/home/morssyamr/Downloads/paper/COMCOT/presaved');
+    tme, szx,szy,szz,mp,gf     =torch.load(dir_path+'/COMCOT/presaved');
     PTX,PTY=180,140
 
 print('Now plotting some examples of the COMCOT simulation output')
