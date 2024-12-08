@@ -253,7 +253,7 @@ else:
    uplft,Preds,Err,see,obstyp,dmnobs=torch.load(dir_path+'/invert/res',map_location='cpu')
 
 
-_=plt.title('Comparison of uplift')
+_=plt.title('Comparison of uplift with optimisation iterations')
 _=plt.imshow( torch.cat([see.add(SSZ.ge(0).log()).view(-1,366)[30:130,60:130], see.view(-1,366)[30:130,:5].mul(0).log(), uplft[EPS-1].add(SSZ.ge(0).log()).view(-1,366)[30:130,60:130] ] ,dim=1 ) ,origin='lower')
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 divider = make_axes_locatable(plt.gca())
