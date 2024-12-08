@@ -253,7 +253,7 @@ else:
    uplft,Preds,Err,see,obstyp,dmnobs=torch.load(dir_path+'/invert/res',map_location='cpu')
 
 
-_=plt.title('Comparison of uplift with optimisation iterations')
+_=plt.title('Comparison of true uplift (left) and obtained uplift (right)')
 _=plt.imshow( torch.cat([see.add(SSZ.ge(0).log()).view(-1,366)[30:130,60:130], see.view(-1,366)[30:130,:5].mul(0).log(), uplft[EPS-1].add(SSZ.ge(0).log()).view(-1,366)[30:130,60:130] ] ,dim=1 ) ,origin='lower')
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 divider = make_axes_locatable(plt.gca())
@@ -277,7 +277,7 @@ cax = divider.append_axes("right", size="5%", pad=0.01)
 cb=fig.colorbar(v,cax=cax)
 _=cb.set_label('(m)')
 _=plt.tight_layout()
-_=fig.suptitle('Evolution of uplift')
+_=fig.suptitle('Evolution of uplift with optimisation iterations')
 _=plt.savefig(dir_path+'/results/Evolution of predicted uplit for 2011TOHOKU01AMMO using 30 offshore sensors only.pdf',bbox_inches = 'tight', dpi=200,pad_inches = 0.01);
 
 fig, axs = plt.subplots(2, 5,figsize=(5.5,3))
