@@ -20,10 +20,10 @@ In all examples below it is assumed that you downloaded this project on you mach
 python /path/to/dir/example_comcot.py 
 ```
 This will plot results that we obtained if no COMCOT application is found. If instead you want to run 
-your own simulation (sing our configuration file) you need to provide a COMCOT exe placed in the directory /COMCOT/SOURCE/
+your own simulation (using our configuration file) you need to provide a COMCOT exe/application to be placed in the directory /COMCOT/SOURCE/
 and its filename must be COMCOT_app.
 
-You can also set the location of initial source point by providing x and y coordinates e.g., for source (100,80)
+You can also set the location of initial source point (if you provided your own COMCOT app) by providing x and y coordinates e.g., for source (100,80)
 ```shell
 python /path/to/dir/example_comcot.py -x 100 -y 80
 ```
