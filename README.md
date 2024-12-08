@@ -52,7 +52,11 @@ wave but the scatter plot is the same.
 python /path/to/dir/example_invert.py
 ```
 Here we use F network (pretrained weight is provided) to carry out an inversion of an
-event given provided data. Results will be plotted and saved. Requires GPU takes about 2-3 min. Can run on CPU but alot slower 20-30 min.
+event given provided data. Results will be plotted and saved. Requires GPU takes about 2-3 min. Can run on CPU but alot slower 20-30 min. 
+If you don't want to wait for inversion you can plot results from a pre-saved inversion using this extra option:
+```shell
+python /path/to/dir/example_invert.py -sim No
+```
 
 
 ### Demo example training on artificial data
